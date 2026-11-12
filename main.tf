@@ -20,3 +20,13 @@ module "network" {
   resource_group_name = azurerm_resource_group.main.name
   tags                = local.tags
 }
+
+module "storage" {
+  source = "./modules/storage"
+
+  name_prefix         = "${var.project}-${var.environment}"
+  unique_suffix       = var.unique_suffix
+  location            = var.location
+  resource_group_name = azurerm_resource_group.main.name
+  tags                = local.tags
+}

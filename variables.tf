@@ -17,3 +17,8 @@ variable "location" {
   description = "Région Azure"
   type        = string
 }
+
+variable "unique_suffix" {
+  description = "Suffixe numérique pour les noms globalement uniques (stockage, registre, Key Vault)"
+  type        = string
+}
